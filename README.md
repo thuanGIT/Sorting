@@ -18,37 +18,37 @@ Copy the following code to test in main method:
 
 *   Create an large-sized array with random double values
 ```java
-    int n = 1000000;
-    double[] array = new double[n];
-    
-    for (int i = 0; i < array.length; i++)
-        array[i] = Math.random()*20;
-    
-    double[] array_1 = new double[n];
-    System.arraycopy(array, 0, array_1, 0, n);
+int n = 1000000;
+double[] array = new double[n];
+
+for (int i = 0; i < array.length; i++)
+    array[i] = Math.random()*20;
+
+double[] array_1 = new double[n];
+System.arraycopy(array, 0, array_1, 0, n);
 ```
 
 *   Estimate the runtime of Insertion Sort
 
 ```java
-		// Test the insertion sorting method
-		System.out.println(Arrays.toString(array) +"\n");
-		long start = System.currentTimeMillis();
-		InsertionSort(array);
-		long end = System.currentTimeMillis();
-		System.out.println(Arrays.toString(array));
-		System.out.println("\nProcessing time: " + (end - start) + " ms \n"); 
+// Test the insertion sorting method
+System.out.println(Arrays.toString(array) +"\n");
+long start = System.currentTimeMillis();
+InsertionSort(array);
+long end = System.currentTimeMillis();
+System.out.println(Arrays.toString(array));
+System.out.println("\nProcessing time: " + (end - start) + " ms \n"); 
 		
 ```
 *    Estimate the runtime of Merge Sort
 ```java
-		// Test the merge sorting method
-		System.out.println(Arrays.toString(array_1));
-		long start_1 = System.currentTimeMillis();
-		mergeSort(array_1);
-		long end_1 = System.currentTimeMillis();
-		System.out.println(Arrays.toString(array_1));
-        System.out.println("\nProcessing time: " + (end_1 - start_1) + " ms\n");
+// Test the merge sorting method
+System.out.println(Arrays.toString(array_1));
+long start_1 = System.currentTimeMillis();
+mergeSort(array_1);
+long end_1 = System.currentTimeMillis();
+System.out.println(Arrays.toString(array_1));
+System.out.println("\nProcessing time: " + (end_1 - start_1) + " ms\n");
         
 ```
 
